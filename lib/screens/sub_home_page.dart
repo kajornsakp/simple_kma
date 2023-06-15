@@ -21,19 +21,19 @@ class SubHomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
-                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงินไม่ใช่บัตร"),
+                    MenuIcon(icon: Icons.receipt, title: "ประวัติทำรายการ"),
+                    MenuIcon(icon: Icons.bookmark, title: "รายงานโปรด"),
+                    MenuIcon(icon: Icons.bar_chart, title: "กองทุนรวม"),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: const [
-                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.card_giftcard, title: "กิฟท์ & สิทธิพิเศษ"),
+                    MenuIcon(icon: Icons.access_time, title: "รายการตั้งล่วงหน้า"),
+                    MenuIcon(icon: Icons.lock, title: "บริการ NDID"),
+                    MenuIcon(icon: Icons.menu, title: "เมนูทั้งหมด"),
                   ],
                 ),
                 const Padding(
