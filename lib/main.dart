@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/screens/sub_home_page.dart';
+import 'package:simple_kma/screens/sub_home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,38 +47,36 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        child: const Icon(Icons.add),
+    return SafeArea(
+      child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: page,
+          onTap: (index) {
+            setState(() {
+              page = index;
+            });
+          },
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.wallet),
+              label: 'หน้าหลัก',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.note),
+              label: 'Search',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+          ],
+        ),
+        body: buildPage(page),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: page,
-        onTap: (index) {
-          setState(() {
-            page = index;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.wallet),
-            label: 'หน้าหลัก',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.note),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
-      body: buildPage(page),
     );
   }
 

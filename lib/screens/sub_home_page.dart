@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:untitled1/components/menu_icon.dart';
+import 'package:simple_kma/components/header_widget.dart';
+import 'package:simple_kma/components/menu_icon.dart';
 
 class SubHomePage extends StatelessWidget {
   const SubHomePage({
@@ -11,47 +12,85 @@ class SubHomePage extends StatelessWidget {
     return Center(
         child: Column(
       children: [
-        Container(
-          height: 300,
-          color: Colors.yellow,
-        ),
+        const HeaderWidget(),
         Expanded(
-          child: ListView(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                ],
-              ),
-              const SizedBox(height: 20),
-              const Text("เมนูใหม่"),
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                  MenuIcon(icon: Icons.money, title: "กดเงิน"),
-                ],
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                  ],
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text("เมนูใหม่"),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                    MenuIcon(icon: Icons.money, title: "กดเงิน"),
+                  ],
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text("ร้านค้าออนไลน์"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 60,
+                    color: Colors.yellow
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text("บริการที่น่าสนใจ"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 60,
+                      color: Colors.yellow
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 60,
+                      color: Colors.yellow
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                      height: 60,
+                      color: Colors.yellow
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],
     ));
   }
 }
+
