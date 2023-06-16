@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simple_kma/components/header_widget.dart';
 import 'package:simple_kma/components/menu_icon.dart';
+import 'package:get/get.dart';
 
 class SubHomePage extends StatelessWidget {
   const SubHomePage({
@@ -20,8 +21,13 @@ class SubHomePage extends StatelessWidget {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    MenuIcon(icon: Icons.money, title: "กดเงินไม่ใช่บัตร"),
+                  children: [
+                    MenuIcon(
+                        icon: Icons.money,
+                        title: "กดเงินไม่ใช่บัตร",
+                        onTap: () async {
+                          Get.toNamed('/second_page');
+                        }),
                     MenuIcon(icon: Icons.receipt, title: "ประวัติทำรายการ"),
                     MenuIcon(icon: Icons.bookmark, title: "รายงานโปรด"),
                     MenuIcon(icon: Icons.bar_chart, title: "กองทุนรวม"),
@@ -29,9 +35,11 @@ class SubHomePage extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    MenuIcon(icon: Icons.card_giftcard, title: "กิฟท์ & สิทธิพิเศษ"),
-                    MenuIcon(icon: Icons.access_time, title: "รายการตั้งล่วงหน้า"),
+                  children: [
+                    MenuIcon(
+                        icon: Icons.card_giftcard, title: "กิฟท์ & สิทธิพิเศษ"),
+                    MenuIcon(
+                        icon: Icons.access_time, title: "รายการตั้งล่วงหน้า"),
                     MenuIcon(icon: Icons.lock, title: "บริการ NDID"),
                     MenuIcon(icon: Icons.menu, title: "เมนูทั้งหมด"),
                   ],
@@ -42,7 +50,7 @@ class SubHomePage extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
+                  children: [
                     MenuIcon(icon: Icons.money, title: "กดเงิน"),
                     MenuIcon(icon: Icons.money, title: "กดเงิน"),
                     MenuIcon(icon: Icons.money, title: "กดเงิน"),
@@ -55,10 +63,7 @@ class SubHomePage extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    height: 60,
-                    color: Colors.yellow
-                  ),
+                  child: Container(height: 60, color: Colors.yellow),
                 ),
                 const Padding(
                   padding: EdgeInsets.all(10),
@@ -66,25 +71,32 @@ class SubHomePage extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                      height: 60,
-                      color: Colors.yellow
-                  ),
+                  child: Container(height: 60, color: Colors.yellow),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                      height: 60,
-                      color: Colors.yellow
-                  ),
+                  child: Container(height: 60, color: Colors.yellow),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                      height: 60,
-                      color: Colors.yellow
-                  ),
+                  child: Container(height: 60, color: Colors.yellow),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(height: 60, color: Colors.yellow),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(height: 60, color: Colors.yellow),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(height: 60, color: Colors.yellow),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(height: 60, color: Colors.yellow),
+                )
               ],
             ),
           ),
@@ -93,4 +105,3 @@ class SubHomePage extends StatelessWidget {
     ));
   }
 }
-

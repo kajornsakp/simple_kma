@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:simple_kma/screens/second_screen.dart';
 import 'package:simple_kma/screens/sub_home_page.dart';
 
 void main() {
@@ -12,9 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
-
       theme: ThemeData(
         brightness: Brightness.light,
         primarySwatch: Colors.red,
@@ -27,6 +28,9 @@ class MyApp extends StatelessWidget {
           unselectedItemColor: Colors.grey,
         )
       ),
+      getPages: [
+        GetPage(name: '/second_page', page: () => SecondScreen()),
+      ],
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -75,7 +79,15 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-        body: buildPage(page),
+        body: IndexedStack(
+          index: page,
+          children: [
+            buildPage(0),
+            buildPage(1),
+            buildPage(2),
+            buildPage(3),
+          ],
+        ),
       ),
     );
   }
