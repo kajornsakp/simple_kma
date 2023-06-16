@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:simple_kma/repository/pokemonRepository.dart';
 import 'package:simple_kma/screens/second_screen.dart';
 import 'package:simple_kma/screens/sub_home_page.dart';
+import 'package:simple_kma/service/pokemon_service.dart';
 
 void main() {
+  Get.put(PokemonService());
+  Get.put(PokemonRepository());
   runApp(const MyApp());
 }
 
